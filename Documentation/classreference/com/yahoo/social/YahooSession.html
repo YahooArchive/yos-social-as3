@@ -1,0 +1,690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="YahooSession,com.yahoo.social.YahooSession,ownerGuid,viewerGuid,application,auth,sessionStore,yql,clearSession,getAccessToken,getConsumer,getOwner,getSessionedUser,getUser,openMessageDialog,openShareDialog,saveSession,sessionFromYAP,setAccessToken" name="keywords">
+<title>com.yahoo.social.YahooSession</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'YahooSession - Yahoo! Social AS3 Component';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Yahoo! Social AS3 Component</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?com/yahoo/social/YahooSession.html&amp;com/yahoo/social/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;YahooSession</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class YahooSession"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.yahoo.social</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class YahooSession</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">YahooSession <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  The YahooSession object defines a session between an application and the Yahoo! Platform. 
+  It is the gateway to accessing user information with the Yahoo! Social APIs.
+  
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br>
+  <div class='listing'><pre>
+   // create a yahoo session object and pass 
+   //into it the oauth credentials, appid and a guid
+   var session:YahooSession = new YahooSession('consumerKey', 'consumerSecret', 'appid');
+  </pre></div>
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">AuthenticationRequest</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#application">application</a> : <a href="methodgroups/ApplicationRequest.html">ApplicationRequest</a>
+<div class="summaryTableDescription">[read-only]
+   The instance of the ApplicationRequest API for this session.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#auth">auth</a> : <a href="methodgroups/AuthorizationRequest.html">AuthorizationRequest</a>
+<div class="summaryTableDescription">[read-only]
+   The instance of the AuthorizationRequest request object for the consumer of this session.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ownerGuid">ownerGuid</a> : String<div class="summaryTableDescription">
+   The guid of the owning user.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sessionStore">sessionStore</a> : <a href="utils/IYahooSessionStore.html">IYahooSessionStore</a>
+<div class="summaryTableDescription">
+   The implementation of IYahooSessionStore attached to this session.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#viewerGuid">viewerGuid</a> : String<div class="summaryTableDescription">
+   The guid of the viewing user.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#yql">yql</a> : <a href="methodgroups/YQL.html">YQL</a>
+<div class="summaryTableDescription">[read-only]
+   The instance of the YQL API for this session.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#YahooSession()">YahooSession</a>(consumerKey:String, consumerSecret:String, applicationId:String, sessionStore:<a href="utils/IYahooSessionStore.html">IYahooSessionStore</a> = null)</div>
+<div class="summaryTableDescription">
+   Creates a new YahooSession object.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clearSession()">clearSession</a>():void</div>
+<div class="summaryTableDescription">
+   Clears the session access token and removes all tokens from the session store.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAccessToken()">getAccessToken</a>():<a href="../oauth/OAuthToken.html">OAuthToken</a>
+</div>
+<div class="summaryTableDescription">
+   The OAuthToken object for this session.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getConsumer()">getConsumer</a>():<a href="../oauth/OAuthConsumer.html">OAuthConsumer</a>
+</div>
+<div class="summaryTableDescription">
+   The OAuthConsumer object for this application.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getOwner()">getOwner</a>():<a href="../social/YahooUser.html">YahooUser</a>
+</div>
+<div class="summaryTableDescription">
+   Returns a YahooUser object representing the profile owner defined by 
+   <code>YahooSession.YAP_OWNER</code> or the OAuth access token.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getSessionedUser()">getSessionedUser</a>():<a href="../social/YahooUser.html">YahooUser</a>
+</div>
+<div class="summaryTableDescription">
+   Returns a YahooUser object representing the currently sessioned user (the viewer of the application) 
+   defined by <code>YahooSession.YAP_VIEWER</code> or the OAuth access token.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUser()">getUser</a>(guid:String):<a href="../social/YahooUser.html">YahooUser</a>
+</div>
+<div class="summaryTableDescription">
+   Gets the user indicated by the GUID given.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#openMessageDialog()">openMessageDialog</a>(to_guids:Array = null, subject:String = null, body:String = null, image:String = null):void</div>
+<div class="summaryTableDescription">
+   Directs the container to open the yml:message dialog.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#openShareDialog()">openShareDialog</a>(to_guids:Array = null, subject:String = null, body:String = null, image:String = null):void</div>
+<div class="summaryTableDescription">
+   Directs the container to open the yml:share dialog.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#saveSession()">saveSession</a>():void</div>
+<div class="summaryTableDescription">
+   Saves the session's request and access token to the token store.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sessionFromYAP()">sessionFromYAP</a>(consumerKey:String, consumerSecret:String, applicationId:String, accessTokenKey:String, accessTokenSecret:String, viewerGUID:String):<a href="../social/YahooSession.html">YahooSession</a>
+</div>
+<div class="summaryTableDescription">[static]
+    
+   </div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setAccessToken()">setAccessToken</a>(token:<a href="../oauth/OAuthToken.html">OAuthToken</a>):Boolean</div>
+<div class="summaryTableDescription">
+   Sets the session access token object.</div>
+</td><td class="summaryTableOwnerCol">YahooSession</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="application"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">application</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>application:<a href="methodgroups/ApplicationRequest.html">ApplicationRequest</a></code>&nbsp;&nbsp;[read-only]<p>
+   The instance of the ApplicationRequest API for this session. 
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get application():<a href="methodgroups/ApplicationRequest.html">ApplicationRequest</a></code>
+<br>
+</div>
+<a name="auth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">auth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>auth:<a href="methodgroups/AuthorizationRequest.html">AuthorizationRequest</a></code>&nbsp;&nbsp;[read-only]<p>
+   The instance of the AuthorizationRequest request object for the consumer of this session. 
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get auth():<a href="methodgroups/AuthorizationRequest.html">AuthorizationRequest</a></code>
+<br>
+</div>
+<a name="ownerGuid"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ownerGuid</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var ownerGuid:String</code><p>
+   The guid of the owning user.
+   </p></div>
+<a name="sessionStore"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sessionStore</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>sessionStore:<a href="utils/IYahooSessionStore.html">IYahooSessionStore</a></code>&nbsp;&nbsp;[read-write]<p>
+   The implementation of IYahooSessionStore attached to this session.
+   </p><p>The default value is <code>YahooSessionStore</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sessionStore():<a href="utils/IYahooSessionStore.html">IYahooSessionStore</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set sessionStore(value:<a href="utils/IYahooSessionStore.html">IYahooSessionStore</a>):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">YahooSessionStore<br>IYahooSessionStore</div>
+</div>
+<a name="viewerGuid"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">viewerGuid</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var viewerGuid:String</code><p>
+   The guid of the viewing user.
+   </p></div>
+<a name="yql"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">yql</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>yql:<a href="methodgroups/YQL.html">YQL</a></code>&nbsp;&nbsp;[read-only]<p>
+   The instance of the YQL API for this session. 
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get yql():<a href="methodgroups/YQL.html">YQL</a></code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="YahooSession()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">YahooSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function YahooSession(consumerKey:String, consumerSecret:String, applicationId:String, sessionStore:<a href="utils/IYahooSessionStore.html">IYahooSessionStore</a> = null)</code><p>
+   Creates a new YahooSession object.
+      
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">consumerKey</span>:String</code> &mdash;     A String containing the OAuth consumer key. (API Key)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">consumerSecret</span>:String</code> &mdash;    A String containing the OAuth consumer secret.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">applicationId</span>:String</code> &mdash;     A String containing the application ID to identify this session.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sessionStore</span>:<a href="utils/IYahooSessionStore.html">IYahooSessionStore</a></code> (default = <code>null</code>)<code></code> &mdash;     An optional implementation of <code>IYahooSessionStore</code> used to cache OAuth tokens.
+   
+   <strong>Note:</strong> An access token key/secret must be obtained by a server-side component or via the 
+   <code>auth</code> property of YahooSession.
+   
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="clearSession()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clearSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clearSession():void</code><p>
+   Clears the session access token and removes all tokens from the session store.
+   </p></div>
+<a name="getAccessToken()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAccessToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAccessToken():<a href="../oauth/OAuthToken.html">OAuthToken</a></code><p>
+   The OAuthToken object for this session.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../oauth/OAuthToken.html">OAuthToken</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">OAuthToken</div>
+</div>
+<a name="getConsumer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getConsumer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getConsumer():<a href="../oauth/OAuthConsumer.html">OAuthConsumer</a></code><p>
+   The OAuthConsumer object for this application.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../oauth/OAuthConsumer.html">OAuthConsumer</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">OAuthConsumer</div>
+</div>
+<a name="getOwner()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getOwner</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getOwner():<a href="../social/YahooUser.html">YahooUser</a></code><p>
+   Returns a YahooUser object representing the profile owner defined by 
+   <code>YahooSession.YAP_OWNER</code> or the OAuth access token.
+   
+   Only valid when a owner GUID is supplied by YAP, otherwise will 
+   default to the logged-in user.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../social/YahooUser.html">YahooUser</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="YahooUser.html" target="">YahooUser</a>
+</div>
+</div>
+<a name="getSessionedUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getSessionedUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getSessionedUser():<a href="../social/YahooUser.html">YahooUser</a></code><p>
+   Returns a YahooUser object representing the currently sessioned user (the viewer of the application) 
+   defined by <code>YahooSession.YAP_VIEWER</code> or the OAuth access token.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../social/YahooUser.html">YahooUser</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="YahooUser.html" target="">YahooUser</a>
+</div>
+</div>
+<a name="getUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getUser(guid:String):<a href="../social/YahooUser.html">YahooUser</a></code><p>
+   Gets the user indicated by the GUID given. 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">guid</span>:String</code> &mdash;    The GUID of the user to get.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../social/YahooUser.html">YahooUser</a></code> &mdash; 
+                        YahooUser  The user indicated by the GUID given.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="YahooUser.html" target="">YahooUser</a>
+</div>
+</div>
+<a name="openMessageDialog()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">openMessageDialog</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function openMessageDialog(to_guids:Array = null, subject:String = null, body:String = null, image:String = null):void</code><p>
+   Directs the container to open the yml:message dialog. 
+   
+   Only valid in applications within YAP.
+    
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">to_guids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash;   An array of GUIDs in which this message should be addressed to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">subject</span>:String</code> (default = <code>null</code>)<code></code> &mdash;   The message subject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">body</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    The message body.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">image</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    A URL to an image to show in the dialog.
+   
+   </td>
+</tr>
+</table>
+</div>
+<a name="openShareDialog()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">openShareDialog</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function openShareDialog(to_guids:Array = null, subject:String = null, body:String = null, image:String = null):void</code><p>
+   Directs the container to open the yml:share dialog. 
+   
+   Only valid in applications within YAP.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">to_guids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash;   An array of GUIDs in which this message should be addressed to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">subject</span>:String</code> (default = <code>null</code>)<code></code> &mdash;   The message subject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">body</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    The message body.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">image</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    A URL to an image to show in the dialog.
+   
+   </td>
+</tr>
+</table>
+</div>
+<a name="saveSession()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">saveSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function saveSession():void</code><p>
+   Saves the session's request and access token to the token store.
+   </p></div>
+<a name="sessionFromYAP()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sessionFromYAP</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function sessionFromYAP(consumerKey:String, consumerSecret:String, applicationId:String, accessTokenKey:String, accessTokenSecret:String, viewerGUID:String):<a href="../social/YahooSession.html">YahooSession</a></code><p>
+    
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">consumerKey</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">consumerSecret</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">applicationId</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accessTokenKey</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accessTokenSecret</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">viewerGUID</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../social/YahooSession.html">YahooSession</a></code></td>
+</tr>
+</table>
+</div>
+<a name="setAccessToken()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setAccessToken</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setAccessToken(token:<a href="../oauth/OAuthToken.html">OAuthToken</a>):Boolean</code><p>
+   Sets the session access token object. 
+   
+   If the token contains a GUID, this function will over-ride the <code>YahooSession.YAP_VIEWER</code> value 
+   with the guid defined by the token.
+   
+   </p><p>The function will also check if the token expiration time has approached. 
+   If it is expired it will return false. At this point you should request a new access token.</p>
+   
+   <p>If the consumer key does not match the consumer key found in the access token it will return false
+   and not set the session.</p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">token</span>:<a href="../oauth/OAuthToken.html">OAuthToken</a></code> &mdash; An OAuthToken object containing the access token and secret.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A Boolean True if the token is valid. 
+   
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

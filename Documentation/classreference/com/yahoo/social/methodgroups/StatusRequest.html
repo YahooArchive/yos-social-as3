@@ -1,0 +1,426 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="StatusRequest,com.yahoo.social.methodgroups.StatusRequest,getStatus" name="keywords">
+<title>com.yahoo.social.methodgroups.StatusRequest</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'StatusRequest - Yahoo! Social AS3 Component';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Yahoo! Social AS3 Component</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/yahoo/social/methodgroups/StatusRequest.html&amp;com/yahoo/social/methodgroups/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;StatusRequest</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class StatusRequest"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.yahoo.social.methodgroups</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class StatusRequest</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">StatusRequest <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="YOSMethodBase.html">YOSMethodBase</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  A wrapper for the Status API.
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br>
+  <div class='listing'><pre>
+   // retrieve the sessioned user
+   var user:YahooUser = _session.getSessionedUser();
+   
+   // add presence response event listeners
+   user.presence.addEventListener(YahooResultEvent.GET_STATUS_SUCCESS, handleGetStatusSuccess);
+   user.presence.addEventListener(YahooResultEvent.GET_STATUS_FAILURE, handleGetStatusFailure);
+   user.presence.getStatus();
+  
+   function handleGetStatusSuccess(event:YahooResultEvent):void
+   {
+    var status:Object = event.data;
+       var message:String = status.message;
+    // do something
+   }
+  
+   function handleGetStatusFailure(event:YahooResultEvent):void
+   {
+    // there was an error fetching the data
+       // do something  
+   }
+  </pre></div>
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://developer.yahoo.com/social/rest_api_guide/status_api.html" target="mm_external">http://developer.yahoo.com/social/rest_api_guide/status_api.html</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#consumer">consumer</a> : <a href="../../oauth/OAuthConsumer.html">OAuthConsumer</a>
+<div class="summaryTableDescription">
+   An OAuthConsumer object containing consumer key and secret values.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#token">token</a> : <a href="../../oauth/OAuthToken.html">OAuthToken</a>
+<div class="summaryTableDescription">
+   An OAuthToken object containing access token key and secret values
+   
+   This value is only used if a user is not defined when signing a request with OAuth.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#user">user</a> : <a href="../../social/YahooUser.html">YahooUser</a>
+<div class="summaryTableDescription">
+   The user referenced in all data requests.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$consumer">$consumer</a> : <a href="../../oauth/OAuthConsumer.html">OAuthConsumer</a>
+<div class="summaryTableDescription">
+   An OAuthConsumer object containing consumer key and secret values.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$format">$format</a> : String = "json"<div class="summaryTableDescription">
+   The response format to apply to all requests.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$hostname">$hostname</a> : String<div class="summaryTableDescription">
+   The hostname to be used in constructing URLs for all requests.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$oauthRequestType">$oauthRequestType</a> : String<div class="summaryTableDescription">
+   The name of the OAuth request type used for all requests in this class.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$token">$token</a> : <a href="../../oauth/OAuthToken.html">OAuthToken</a>
+<div class="summaryTableDescription">
+   An OAuthToken object containing access token key and secret values.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$useExplicitEncoding">$useExplicitEncoding</a> : Boolean = true<div class="summaryTableDescription">
+   Determines if the request parameters in the signature base string 
+   should be encoded using <code>encodeURIComponent</code> when signing the request.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$user">$user</a> : <a href="../../social/YahooUser.html">YahooUser</a>
+<div class="summaryTableDescription">
+   The YahooUser to reference in all requests.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#$version">$version</a> : String = "v1"<div class="summaryTableDescription">
+   The version of the API.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#OAUTH_HOSTNAME">OAUTH_HOSTNAME</a> : String = "api.login.yahoo.com"<div class="summaryTableDescription">[static]
+   The hostname for the Yahoo login service (OAuth) API.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#OAUTH_REALM">OAUTH_REALM</a> : String = "yahooapis.com"<div class="summaryTableDescription">[static]
+   The name of the OAuth realm for Yahoo! web-services.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#StatusRequest()">StatusRequest</a>()</div>
+<div class="summaryTableDescription">
+   Class constructor.</div>
+</td><td class="summaryTableOwnerCol">StatusRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getStatus()">getStatus</a>():void</div>
+<div class="summaryTableDescription">
+   Retrieves the current status message for this user.</div>
+</td><td class="summaryTableOwnerCol">StatusRequest</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#decodeJSON()">decodeJSON</a>(s:String):*</div>
+<div class="summaryTableDescription">
+   A simple wrapper of the JSON::decode function.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#encodeJSON()">encodeJSON</a>(o:Object):String</div>
+<div class="summaryTableDescription">
+   A simple wrapper of the JSON::encode function.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#getDefaultArguments()">getDefaultArguments</a>():Object</div>
+<div class="summaryTableDescription">
+   Returns an object containing the required or default request parameters.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#getResponseStatusOk()">getResponseStatusOk</a>(status:int):Boolean</div>
+<div class="summaryTableDescription">
+   Returns true if the status code is 200.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#handleSecurityError()">handleSecurityError</a>(response:Object):void</div>
+<div class="summaryTableDescription">
+   Dispatches a <code>SECURITY_ERROR</code> event.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#sendRequest()">sendRequest</a>(httpMethod:String, url:String, callback:Object, args:Object = null, headers:Array = null):void</div>
+<div class="summaryTableDescription">
+   Signs the request with OAuth credentials then sends the request to the web-service with the supplied callbacks.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:getStatusFailure">getStatusFailure</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispatched when the getStatus request fails.</td><td class="summaryTableOwnerCol">StatusRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:getStatusSuccess">getStatusSuccess</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispatched when the getStatus request executes successfully.</td><td class="summaryTableOwnerCol">StatusRequest</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="YOSMethodBase.html#event:securityError">securityError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a request fails due to a security error.</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a><a name="protectedConstantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedConstant" id="hideInheritedProtectedConstant">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedConstant');" href="#protectedConstantSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Constants</a>
+</div>
+<div class="showInheritedProtectedConstant" id="showInheritedProtectedConstant">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedConstant');" href="#protectedConstantSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Constants</a>
+</div>
+</div>
+<table id="summaryTableProtectedConstant" class="summaryTable hideInheritedProtectedConstant" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#APPSTORE_WS_HOSTNAME">APPSTORE_WS_HOSTNAME</a> : String = "appstore.apps.yahooapis.com"<div class="summaryTableDescription">[static]
+   The hostname for the Yahoo Application Platform data store.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#SOCIAL_WS_HOSTNAME">SOCIAL_WS_HOSTNAME</a> : String = "social.yahooapis.com"<div class="summaryTableDescription">[static]
+   The hostname for Yahoo Social APIs.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+<tr class="hideInheritedProtectedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="YOSMethodBase.html#YQL_HOSTNAME">YQL_HOSTNAME</a> : String = "query.yahooapis.com"<div class="summaryTableDescription">[static]
+   The hostname for the YQL API.</div>
+</td><td class="summaryTableOwnerCol"><a href="YOSMethodBase.html">YOSMethodBase</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="StatusRequest()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">StatusRequest</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function StatusRequest()</code><p>
+   Class constructor.
+   Creates a new StatusRequest object for the provided user. 
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="getStatus()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getStatus():void</code><p>
+   Retrieves the current status message for this user. 
+   
+   </p><br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   
+   </pre></div>
+   <p></p>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:getStatusFailure"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getStatusFailure</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>YahooResultEvent</code></a>
+<br>
+<p></p><p>
+ Dispatched when the getStatus request fails.
+ </p></div>
+<a name="event:getStatusSuccess"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getStatusSuccess</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>YahooResultEvent</code></a>
+<br>
+<p></p><p>
+ Dispatched when the getStatus request executes successfully.
+ </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

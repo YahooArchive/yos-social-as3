@@ -1,0 +1,297 @@
+/* CSS file */
+
+/* CTA BUTTON */
+
+Button.yellowSmall {
+   fillAlphas: 1, 1, 0.75, 0.65;
+   fillColors: #fdfbe4, #ffd952, #fdfbe4, #ffd952;
+   color: #000000;
+   textRollOverColor: #000000;
+   borderColor: #ffb035;
+   themeColor: #ffb035;
+   height: 19px;
+   	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 12;
+	cornerRadius: 0;
+   
+}
+
+Button.yellowMed {
+   fillAlphas: 1, 1, 0.75, 0.65;
+   fillColors: #fdfbe4, #ffd952, #fdfbe4, #ffd952;
+   color: #000000;
+   textRollOverColor: #000000;
+   borderColor: #ffb035;
+   themeColor: #ffb035;
+   height: 38px;
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 14;
+   
+}
+
+Button.yellowBig {
+   fillAlphas: 1, 1, 0.75, 0.65;
+   fillColors: #fdfbe4, #ffd952, #fdfbe4, #ffd952;
+   color: #000000;
+   textRollOverColor: #000000;
+   borderColor: #ffb035;
+   themeColor: #ffb035;
+   height: 43px;
+   	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 16;
+   
+}
+
+/* CANCEL BUTTON */
+
+Button.graySmall
+{
+	fillAlphas: 1.0, 1.0;
+	fillColors: #FCFCFC, #B6B6B6;
+	borderColor: #D9D9D9;
+	themeColor: #D9D9D9;
+	color: #000000;
+	height: 19px;
+   	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 12;
+	cornerRadius: 0;
+}
+
+Button.grayMed
+{
+	fillAlphas: 1.0, 1.0;
+	fillColors: #FCFCFC, #B6B6B6;
+	borderColor: #D9D9D9;
+	themeColor: #D9D9D9;
+	color: #000000;
+	height: 38px;
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 14;
+}
+
+Button.grayBig
+{
+	fillAlphas: 1.0, 1.0;
+	fillColors: #FCFCFC, #B6B6B6;
+	borderColor: #D9D9D9;
+	themeColor: #D9D9D9;
+	color: #000000;
+	height: 43px;
+   	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 16;
+}
+
+
+/* Rollover BUTTON */
+
+Button.blueSmall
+{
+	fillAlphas: 1.0, 1.0;
+	fillColors: #D2DFED, #789AC7;
+	themeColor: #B6C5D8;
+	color: #000000;
+	height: 19px;
+   	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 12;
+	cornerRadius: 0;
+}
+
+Button.blueMed
+{
+	fillAlphas: 1.0, 1.0;
+	fillColors: #D2DFED, #789AC7;
+	themeColor: #B6C5D8;
+	color: #000000;
+	height: 38px;
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 14;
+}
+
+Button.blueBig
+{
+	fillAlphas: 1.0, 1.0;
+	fillColors: #D2DFED, #789AC7;
+	themeColor: #B6C5D8;
+	color: #000000;
+	height: 43px;
+   	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 16;
+}
+
+
+/* PRIMARY TABS */
+
+ButtonBar {
+   buttonStyleName: "mybuttonBarButtonStyle";
+   firstButtonStyleName: "mybuttonBarFirstButtonStyle";
+   lastButtonStyleName: "mybuttonBarLastButtonStyle";
+}
+
+
+.mybuttonBarButtonStyle {
+   fillAlphas: 1.0, 1.0, 0.8, 0.65;
+   fillColors: #1886F0, #9EDAFD, #E6F0F9, #F6FBFF;
+   color: #ffffff;
+   textRollOverColor: #0066CC;
+   textSelectedColor: #0066cc;
+   themeColor: #65B2FD;
+	borderColor: #BDDBFD;
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 12;
+}
+
+.mybuttonBarFirstButtonStyle {
+   cornerRadius: 0;
+	fillAlphas: 1, 1, 0.75, 0.65;
+	fillColors: #1787ED, #9AD5FD, #e8eff5, #eef6ff;
+	borderColor: #BDDBFD;
+	themeColor: #BDDBFD;
+	color: #FFFFFF;
+	textRollOverColor: #0066CC;
+	fontSize: 12;
+	fontFamily: Arial;
+	textSelectedColor: #0066CC;
+}
+
+.mybuttonBarLastButtonStyle {
+   cornerRadius: 0;
+   fillAlphas: 1, 1, 0.75, 0.65;
+   fillColors: #1787ed, #9ad5fd, #e8eff5, #eef6ff;
+   color: #ffffff;
+   textRollOverColor: #0066cc;
+   textSelectedColor: #0066cc;
+   themeColor: #bddbfd;
+	borderColor: #BDDBFD;
+	fontSize: 12;
+	fontFamily: Arial;
+}
+ButtonBar.secondary
+{
+	buttonStyleName: buttonBarButton;
+	firstButtonStyleName: buttonBarButton;
+	lastButtonStyleName: buttonBarButton;
+}
+Button.red
+{
+	borderColor: #F30707;
+	fillAlphas: 0.55, 1.0, 0.14, 0.14;
+	fillColors: #E60E0E, #E60E0E;
+	color: #FFFFFF;
+	textRollOverColor: #272827;
+	textSelectedColor: #FFFFFF;
+	themeColor: #CC0000;
+	cornerRadius: 0;
+}
+
+.buttonBarButton
+{
+	cornerRadius: 0;
+	fillAlphas: 1, 1, 0.75, 0.65;
+	fillColors: #EFF8FF, #D6F3FB, #82BEFC, #77B3F1;
+	color: #0066CC;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #0066cc;
+	themeColor: #bddbfd;
+	borderColor: #BDDBFD;
+}
+
+
+
+ComboBox {
+   fillAlphas: 1, 1, 0.75, 0.65;
+   fillColors: #ffffff, #ffffff, #ffffff, #eeeeee;
+   themeColor: #0066ca;
+}
+
+
+TitleWindow
+{
+	borderColor: #BADCE8;
+	cornerRadius: 0;
+	titleStyleName: titleWindowTitle;
+	statusStyleName: titleWindowStatus;
+	borderThicknessLeft: 5;
+	borderThicknessTop: 5;
+	borderThicknessRight: 5;
+}
+
+
+/* Text Styles */
+Text.H1
+{
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 18;
+}
+
+
+Text.H2
+{
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 15;
+}
+
+Text.H3
+{
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 12;
+}
+
+Text.H4
+{
+	fontFamily: Arial;
+	fontWeight: normal;
+	fontSize: 12;
+}
+
+Text.H5
+{
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 11;
+}
+
+Text.H6
+{
+	fontFamily: Verdana;
+	fontWeight: normal;
+	fontSize: 10;
+}
+
+Text.Secondary
+{
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 11;
+	color: #fcb111;
+}
+
+Text.Placeholder
+{
+	fontFamily: Verdana;
+	fontWeight: normal;
+	fontSize: 10;
+	color: #ababab;
+}
+
+Text.Links
+{
+	fontFamily: Arial;
+	fontWeight: bold;
+	fontSize: 11;
+	color: #0066cc;
+}
+
+
