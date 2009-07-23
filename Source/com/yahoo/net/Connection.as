@@ -84,8 +84,10 @@ package com.yahoo.net
 		 * 
 		 * @return 				The URLRequest object generated.
 		 */
-		public static function asyncRequest(httpMethod:String, url:String, callback:Object, args:Object=null, headers:Array=null):URLRequest 
+		public static function asyncRequest(httpMethod:String, url:String, callback:Object, args:Object=null, headers:Array=null, timeout:int=-1):URLRequest 
 		{
+			var hasResponse:Boolean;
+			var timedOut:Boolean;
 			var status:int;
 			var responseHeaders:Array;
 			var urlLoader:URLLoader;
@@ -142,6 +144,7 @@ package com.yahoo.net
 			
 			urlLoader.addEventListener(Event.COMPLETE, function(event:Event):void 
 			{
+				hasResponse = true;
 				var responseText:String = urlLoader.data;
 				var responseXML:XML;
 				var parseSuccess:Boolean=true;
@@ -203,6 +206,33 @@ package com.yahoo.net
 					});
 				}
 			});
+			
+			if(timeout > 0) {
+				flash.utils.setTimeout(function ():void 
+				{
+					if(!hasResponse) {
+						urlLoader.close();
+						timedOut = true;
+						var data:Object = {
+							status:status,
+							responseHeaders:responseHeaders,
+							args:args,
+							url:url,
+							headers:headers,
+							method:httpMethod,
+							bytesLoaded: urlLoader.bytesLoaded,
+							bytesTotal: urlLoader.bytesTotal,
+							timedOut:timedOut
+						};
+						if(callback.timeout && typeof callback.timeout == FUNCTION) {
+							callback.timeout(data);
+						}
+						// if(callback.failure && typeof callback.failure == FUNCTION) {
+						// 	callback.failure(data);					
+						// }
+					}
+				}, timeout);
+			}
 			
 			var request:URLRequest = new URLRequest(url);
 			var n:String = null;
