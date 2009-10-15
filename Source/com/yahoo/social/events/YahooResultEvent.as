@@ -44,6 +44,18 @@ package com.yahoo.social.events
 		public static const GET_CONTACTS_FAILURE:String = "getContactsFailure";
 		
 		/**
+		 * Constant defining the name of the event fired when the <code>getContact</code> request completes successfully.
+		 * @see Contacts
+		 */		
+		public static const GET_CONTACT_SUCCESS:String = "getContactSuccess";
+		
+		/**
+		 * Constant defining the name of the event fired when the <code>getContact</code> request encounters an error.
+		 * @see Contacts
+		 */		
+		public static const GET_CONTACT_FAILURE:String = "getContactFailure";
+		
+		/**
 		 * Constant defining the name of the event fired when the <code>getStatus</code> request completes successfully.
 		 * @see StatusRequest
 		 */		

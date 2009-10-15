@@ -12,14 +12,24 @@ package com.yahoo.social.methodgroups
 	import flash.net.URLRequestMethod;
 	
 	/**
-	* Dispatched when the getContacts request executes successfully.
-	*/	
+	 * Dispatched when the getContacts request executes successfully.
+	 */	
 	[Event(name="getContactsSuccess", type="YahooResultEvent")]
 	
 	/**
-	* Dispatched when the getContacts request fails.
-	*/	
+	 * Dispatched when the getContacts request fails.
+	 */	
 	[Event(name="getContactsFailure", type="YahooResultEvent")]
+	
+	/**
+	 * Dispatched when the getContact request executes successfully.
+	 */	
+	[Event(name="getContactSuccess", type="YahooResultEvent")]
+	
+	/**
+	 * Dispatched when the getContact request fails.
+	 */	
+	[Event(name="getContactFailure", type="YahooResultEvent")]
 	
 	/**
 	 * A wrapper for the Connections API. 
@@ -144,5 +154,78 @@ package com.yahoo.social.methodgroups
 			this.dispatchEvent(event);
 		}
 		
+		/**
+		 * Fetches a single contact given the contact ID. 
+		 */
+		public function getContact(cid:int):void
+		{
+			if(!this.$user.sessioned)
+			{
+				throw new Error("Cannot get contacts for an unsessioned user");
+				return;
+			}
+			
+			var url:YahooURL = new YahooURL("http", this.$hostname);
+			url.rawResource(this.$version+"/user");
+			url.resource(this.$user.guid);
+			url.rawResource("contact");
+			url.resource(cid.toString());
+			
+			var args:Object = this.getDefaultArguments();
+			
+			var callback:Object = new Object();
+			callback.success = handleGetContactSuccess;
+			callback.failure = handleGetContactFailure;
+			callback.security = handleSecurityError;
+			
+			this.sendRequest(URLRequestMethod.GET, url.toString(), callback, args);
+		}
+		
+		/**
+		 * @private
+		 * @param response
+		 * 
+		 */		
+		private function handleGetContactSuccess(response:Object):void
+		{
+			var rsp:String = response.responseText;
+			var json:Object = null;
+			
+			if(this.getResponseStatusOk(response.status))
+			{
+				try
+				{
+					json = this.decodeJSON(rsp);
+				}
+				catch(error:JSONParseError)
+				{
+					handleGetContactFailure(response);
+					return;
+				}
+				
+				if(json.error)
+				{
+					handleGetContactFailure(response);
+				}
+				
+				var event:YahooResultEvent = new YahooResultEvent(YahooResultEvent.GET_CONTACT_SUCCESS, json.contact);
+				this.dispatchEvent(event);
+			}
+			else
+			{
+				handleGetContactFailure(response);
+			}
+		}
+		
+		/**
+		 * @private
+		 * @param response
+		 * 
+		 */		
+		private function handleGetContactFailure(response:Object):void
+		{
+			var event:YahooResultEvent = new YahooResultEvent(YahooResultEvent.GET_CONTACT_FAILURE, response);
+			this.dispatchEvent(event);
+		}
 	}
 }

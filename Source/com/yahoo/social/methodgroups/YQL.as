@@ -87,6 +87,12 @@ package com.yahoo.social.methodgroups
 		private var $environmentFile:String;
 		
 		/**
+		 * Storage variable for diagnostics property.
+		 * @private 
+		 */	
+		private var $diagnostics:Boolean = true;
+		
+		/**
 		 * Class constructor.
 		 * Creates a new YQL object.
 		 */	
@@ -120,7 +126,7 @@ package com.yahoo.social.methodgroups
 			
 			var args:Object = this.getDefaultArguments();
 			args.q = (requestHasConsumer) ? this.escapeQuery(query) : query; // oauth needs the query to be encoded correctly.
-//			args.q = query; 
+			args.diagnostics = this.diagnostics; 
 			
 			var method:String = URLRequestMethod.GET;
 			
@@ -132,6 +138,26 @@ package com.yahoo.social.methodgroups
 			}else{
 				Connection.asyncRequest(method, url.toString(), callback, args);
 			}
+		}
+		
+		/**
+		 * Determines if YQL will return a detailed diagnostics report within the response.
+		 * @return 
+		 * 
+		 */		
+		public function get diagnostics():Boolean
+		{
+			return $diagnostics;
+		}
+		
+		/**
+		 * @private
+		 * @param value
+		 * 
+		 */		
+		public function set diagnostics(value:Boolean):void
+		{
+			$diagnostics = value;
 		}
 		
 		/**

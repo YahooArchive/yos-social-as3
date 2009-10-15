@@ -93,6 +93,11 @@ package com.yahoo.social
 		public var viewerGuid:String;
 		
 		/**
+		 * The unique id for the application using yml:swf. This value is provided via flashvars. 
+		 */ 
+		public var yap_swfid:String;
+		
+		/**
 		 * The LocalConnection object used to communicate with the YAP bridge swf.
 		 * @private
 		 */		
@@ -150,6 +155,8 @@ package com.yahoo.social
 			super();
 			
 			this.$consumer = new OAuthConsumer(consumerKey, consumerSecret);
+			
+			this.$applicationId = applicationId;
 			
 			if($consumer.empty) throw new Error("Consumer key and/or secret must not have empty or null values.");
 			
@@ -382,28 +389,6 @@ package com.yahoo.social
 			this.lcDialogCall("yml_openMessageDialog", to_guids, subject, body, image);
 		}
 		
-		/* UPCOMING *********************************************************************************
-		/**
-		 * Opens or replaces a window in the application that contains the Flash Player container (usually a browser). 
-		 * @param url		The URL to browse to. (HTTP protocol must be specified as either 'http' or 'https')
-		 * @param window 	The browser window or HTML frame in which to display the document indicated by the request parameter.
-		 * 
-		 */		
-		/* UPCOMING *********************************************************************************
-		public function navigateToURL(url:String, window:String=null):void
-		{
-			var method:String = "navigateToURL";
-			getLocalConnection().send(getLocalConnectionName(), method, url, window);
-		}
-		
-		/* UPCOMING *********************************************************************************
-		public function navigateToView(view:String, mode:String=null, content:String=null):void
-		{
-			var method:String = "navigateToView";
-			getLocalConnection().send(getLocalConnectionName(), method, view, mode, content);
-		}
-		*********************************************************************************************/
-		
 	//--------------------------------------
 	//  Private methods
 	//--------------------------------------
@@ -416,8 +401,8 @@ package com.yahoo.social
 		 */		
 		private function getLocalConnectionName():String
 		{
-			// todo: add a timestamp to allow multiple instances of an app.
-			return LOCAL_CONNECTION_NAME+"-"+$applicationId;
+//			return LOCAL_CONNECTION_NAME+"-"+this.$applicationId+"-"+this.yap_swfid;
+			return LOCAL_CONNECTION_NAME+"-"+this.$applicationId;
 		}
 		
 		/**
@@ -428,7 +413,7 @@ package com.yahoo.social
 		private function getLocalConnection():LocalConnection
 		{
 			if(!$applicationId || $applicationId.length==0) 
-				throw new Error("Required application ID string is null or empty. Set YahooSession.YAP_APPID to a non-null value.");
+				throw new Error("Required application ID string is null or empty.");
 			
 			// this will ensure you create the LocalConnection 
 			// once and only when you need it.
@@ -460,7 +445,10 @@ package com.yahoo.social
 		{
 			subject = (subject) ? subject : "";
 			body = (body) ? body : "";
-			getLocalConnection().send(getLocalConnectionName(), method, to_guids, subject, body, image);
+			
+			var lc:LocalConnection = getLocalConnection();
+			var name:String = getLocalConnectionName();
+			lc.send(name, method, to_guids, subject, body, image);
 		}
 		
 		/**
