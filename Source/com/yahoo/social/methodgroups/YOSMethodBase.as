@@ -256,7 +256,7 @@ package com.yahoo.social.methodgroups
 		protected function sendRequest(httpMethod:String, url:String, callback:Object, args:Object=null, headers:Array=null):void
 		{
 			if(!headers) headers = [];
-			headers.push( new URLRequestHeader("Accept","application/json") );
+			// headers.push( new URLRequestHeader("Accept","application/json") );
 			
 			var connection:OAuthConnection = OAuthConnection.fromConsumerAndToken(this.consumer, this.token);
 			connection.realm = OAUTH_REALM;
